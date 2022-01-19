@@ -1,0 +1,1373 @@
+<?xml version = "1.0"?>
+
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">       
+
+  <xs:simpleType name="fontface">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="r" />
+        <xs:enumeration value="bl" />
+        <xs:enumeration value="bk" />
+        <xs:enumeration value="br" />
+        <xs:enumeration value="i" />
+        <xs:enumeration value="I" />
+        <xs:enumeration value="l" />
+        <xs:enumeration value="oe" />
+        <xs:enumeration value="f" />
+        <xs:enumeration value="bli" />
+        <xs:enumeration value="bki" />
+        <xs:enumeration value="bri" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="notetype">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="e" />
+        <xs:enumeration value="f" />
+        <xs:enumeration value="m" />
+        <xs:enumeration value="lm" />
+        <xs:enumeration value="rm" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="entrytype">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="h" />
+        <xs:enumeration value="g" />
+        <xs:enumeration value="d" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="grouptype">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="a" />
+        <xs:enumeration value="t" />
+        <xs:enumeration value="u" />
+        <xs:enumeration value="p" />
+        <xs:enumeration value="b" />
+    </xs:restriction>
+  </xs:simpleType>
+     
+  <xs:simpleType name="classtype">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="type" />
+        <xs:enumeration value="accent" />
+        <xs:enumeration value="archaic" />
+        <xs:enumeration value="author" />
+        <xs:enumeration value="borrowing" />
+        <xs:enumeration value="compound" />
+        <xs:enumeration value="contraction" />
+        <xs:enumeration value="derivation" />
+        <xs:enumeration value="dialect" />
+        <xs:enumeration value="diminutive" />
+        <xs:enumeration value="distinction" />
+        <xs:enumeration value="etymlang" />
+        <xs:enumeration value="gender:androgynous" />
+        <xs:enumeration value="gender:common" />
+        <xs:enumeration value="gender:doubtful" />
+        <xs:enumeration value="gender:male" />
+        <xs:enumeration value="gender:female" />
+        <xs:enumeration value="gender:male&amp;female" />
+        <xs:enumeration value="gender:neutral" />
+        <xs:enumeration value="gender:omnia" />
+        <xs:enumeration value="inflection" />
+        <xs:enumeration value="kind" />
+        <xs:enumeration value="mnemonic" />
+        <xs:enumeration value="neologism" />
+        <xs:enumeration value="new" />
+        <xs:enumeration value="term" />
+        <xs:enumeration value="number:plural" />
+        <xs:enumeration value="old" />
+        <xs:enumeration value="word" />
+        <xs:enumeration value="pos" />
+        <xs:enumeration value="pronounce" />
+        <xs:enumeration value="proverbial" />
+        <xs:enumeration value="register" />
+        <xs:enumeration value="semantic" />
+        <xs:enumeration value="spelling" />
+        <xs:enumeration value="unknown" />
+    </xs:restriction> 
+  </xs:simpleType>     
+     
+
+     
+  <xs:simpleType name="langstr">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="ab" />
+        <xs:enumeration value="ae" />
+        <xs:enumeration value="al" />
+        <xs:enumeration value="an" />
+        <xs:enumeration value="ar" />
+        <xs:enumeration value="am" />
+        <xs:enumeration value="ac" />
+        <xs:enumeration value="as" />
+        <xs:enumeration value="bb" />
+        <xs:enumeration value="ba" />
+        <xs:enumeration value="bl" />
+        <xs:enumeration value="bo" />
+        <xs:enumeration value="br" />
+        <xs:enumeration value="bu" />
+        <xs:enumeration value="ca" />
+        <xs:enumeration value="cb" />
+        <xs:enumeration value="ce" />
+        <xs:enumeration value="cl" />
+        <xs:enumeration value="ch" />
+        <xs:enumeration value="ci" />
+        <xs:enumeration value="co" />
+        <xs:enumeration value="cu" />
+        <xs:enumeration value="da" />
+        <xs:enumeration value="dy" />
+        <xs:enumeration value="dv" />
+        <xs:enumeration value="du" />
+        <xs:enumeration value="ea" />
+        <xs:enumeration value="eg" />
+        <xs:enumeration value="en" />
+        <xs:enumeration value="ct" />
+        <xs:enumeration value="es" />
+        <xs:enumeration value="ex" />
+        <xs:enumeration value="et" />
+        <xs:enumeration value="er" />
+        <xs:enumeration value="fl" />
+        <xs:enumeration value="fr" />
+        <xs:enumeration value="pi" />
+        <xs:enumeration value="fi" />
+        <xs:enumeration value="ga" />
+        <xs:enumeration value="gc" />
+        <xs:enumeration value="gl" />
+        <xs:enumeration value="ge" />
+        <xs:enumeration value="gr" />
+        <xs:enumeration value="go" />
+        <xs:enumeration value="gs" />
+        <xs:enumeration value="gk" />
+        <xs:enumeration value="gkt" />
+        <xs:enumeration value="gu" />
+        <xs:enumeration value="ha" />
+        <xs:enumeration value="he" />
+        <xs:enumeration value="het" />
+        <xs:enumeration value="hr" />  
+        <xs:enumeration value="hd" />
+        <xs:enumeration value="hi" />
+        <xs:enumeration value="hn" />
+        <xs:enumeration value="hu" />
+        <xs:enumeration value="ic" />
+        <xs:enumeration value="il" />
+        <xs:enumeration value="in" />
+        <xs:enumeration value="ir" />
+        <xs:enumeration value="it" />
+        <xs:enumeration value="ja" />
+        <xs:enumeration value="kt" />
+        <xs:enumeration value="lc" />
+        <xs:enumeration value="la" />
+        <xs:enumeration value="lt" />
+        <xs:enumeration value="le" />
+        <xs:enumeration value="li" />
+        <xs:enumeration value="ld" />
+        <xs:enumeration value="lu" />
+        <xs:enumeration value="mg" />
+        <xs:enumeration value="ma" />
+        <xs:enumeration value="my" />
+        <xs:enumeration value="mx" />
+        <xs:enumeration value="mn" />
+        <xs:enumeration value="me" />
+        <xs:enumeration value="md" />
+        <xs:enumeration value="ml" />
+        <xs:enumeration value="mo" />
+        <xs:enumeration value="na" /> 
+        <xs:enumeration value="ne" />
+        <xs:enumeration value="nk" />
+        <xs:enumeration value="no" />
+        <xs:enumeration value="nw" />
+        <xs:enumeration value="nh" />
+        <xs:enumeration value="nn" />
+        <xs:enumeration value="nb" />
+        <xs:enumeration value="nr" />
+        <xs:enumeration value="nt" />
+        <xs:enumeration value="oc" />
+        <xs:enumeration value="oe" />
+        <xs:enumeration value="of" />
+        <xs:enumeration value="on" />
+        <xs:enumeration value="os" />
+        <xs:enumeration value="ow" />
+        <xs:enumeration value="ox" />
+        <xs:enumeration value="pe" />
+        <xs:enumeration value="ph" />
+        <xs:enumeration value="pr" />
+        <xs:enumeration value="po" />
+        <xs:enumeration value="pt" />
+        <xs:enumeration value="pu" />
+        <xs:enumeration value="quo" />
+        <xs:enumeration value="rn" />
+        <xs:enumeration value="ru" />
+        <xs:enumeration value="san" />
+        <xs:enumeration value="sa" />
+        <xs:enumeration value="sx" /> 
+        <xs:enumeration value="sc" />
+        <xs:enumeration value="sh" />
+        <xs:enumeration value="sr" />
+        <xs:enumeration value="sf" />
+        <xs:enumeration value="sl" />
+        <xs:enumeration value="sm" />
+        <xs:enumeration value="sn" />
+        <xs:enumeration value="sp" />
+        <xs:enumeration value="st" />
+        <xs:enumeration value="sk" />
+        <xs:enumeration value="ss" />
+        <xs:enumeration value="se" />
+        <xs:enumeration value="sy" />
+        <xs:enumeration value="syt" />
+        <xs:enumeration value="tt" />
+        <xs:enumeration value="th" />
+        <xs:enumeration value="tbd" />
+        <xs:enumeration value="tu" />
+        <xs:enumeration value="ts" />
+        <xs:enumeration value="un" />
+        <xs:enumeration value="vu" />
+        <xs:enumeration value="wa" />
+        <xs:enumeration value="war" />
+        <xs:enumeration value="we" />
+        <xs:enumeration value="wn" />
+        <xs:enumeration value="wm" />
+        <xs:enumeration value="wt" />
+        <xs:enumeration value="wo" /> 
+        <xs:enumeration value="yk" />                  
+    </xs:restriction>
+  </xs:simpleType>  
+
+
+  <xs:complexType name="Leme" mixed="true">
+    <xs:choice  minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="section" type="Section" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="wordentry" type="Wordentry" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="wordgroup1" type="Wordgroup1" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="closing" type="Closing" minOccurs="0" maxOccurs="unbounded"/>
+           
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>      
+    
+    <xs:attribute name="no" type="xs:string" use="required" />
+  </xs:complexType>	
+  
+  
+  <xs:complexType name="Section" mixed="true">
+    <xs:choice minOccurs ="0" maxOccurs="unbounded">
+      <xs:element name="wordentry" type="Wordentry" minOccurs="0" maxOccurs="unbounded"/>
+   
+      <xs:element name="wordgroup1" type="Wordgroup1" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="closing" type="Closing" minOccurs="0" maxOccurs="unbounded"/>
+         
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>     
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>    
+  
+
+  <xs:complexType name="Wordgroup1" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="alpha" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="wordentry" type="Wordentry" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="wordgroup2" type="Wordgroup2" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="type" use="required" type="grouptype"/>
+    <xs:attribute name="object" use="optional" type="xs:string"/>
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+  </xs:complexType>
+ 
+
+  <xs:complexType name="Wordgroup2" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="alpha" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="wordentry" type="Wordentry" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="wordgroup3" type="Wordgroup3" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/>  
+    </xs:choice>
+    
+    <xs:attribute name="type" use="required" type="grouptype"/>
+    <xs:attribute name="object" use="optional"  type="xs:string"/>
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+  </xs:complexType> 
+ 
+ 
+ 
+  <xs:complexType name="Wordgroup3" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="alpha" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="wordentry" type="Wordentry" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="type" use="required" type="grouptype"/>
+    <xs:attribute name="object" use="optional"  type="xs:string"/>
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+  </xs:complexType> 
+  
+
+  <xs:complexType name="Wordentry" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="form" type="Form" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="xpln" type="Xpln" minOccurs="0" maxOccurs="unbounded"/>
+         
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="type" use="required" type="entrytype"/>
+    <xs:attribute name="joinnext"  use="optional" type="xs:string"/>
+    <xs:attribute name="anchor"  use="optional" type="xs:string"/>
+  </xs:complexType>  
+
+
+  <xs:simpleType name="form_location">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="text" />
+      <xs:enumeration value="margin" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="Form" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">    
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+   
+      </xs:choice>
+    
+    <xs:attribute name="location" use="optional" type="form_location"/>
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+    <xs:attribute name="number" use="optional" type="xs:string"/>
+    <xs:attribute name="lexeme" use="optional" type="xs:string"/>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>  
+  
+  
+  <xs:simpleType name="xpln_location">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="text" />
+      <xs:enumeration value="margin" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  
+  <xs:complexType name="Xpln" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      <xs:element name="heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="subform" type="Subform" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="subxpln" type="Subxpln" minOccurs="0" maxOccurs="unbounded"/>   
+     
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+    <xs:attribute name="number" use="optional" type="xs:string"/>
+    <xs:attribute name="location" use="optional" type="xpln_location"/>
+    <xs:attribute name="lexeme" use="optional" type="xs:string"/>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>   
+  
+  
+  <xs:complexType name="Subform" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+     
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+  </xs:complexType> 
+ 
+ 
+  <xs:complexType name="Subxpln" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      <xs:element name="subform" type="Subform" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="subxpln" type="Subxpln" minOccurs="0" maxOccurs="unbounded"/>   
+       
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="lang" use="required" type="langstr"/>
+  </xs:complexType>  
+ 
+ 
+  <xs:complexType name="Heading" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      <xs:element name="alpha" type="Alpha" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+  </xs:complexType> 
+ 
+ 
+ 
+  <xs:complexType name="Closing" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+  </xs:complexType> 
+ 
+ 
+  <xs:complexType name="Alpha" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">       
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+  </xs:complexType> 
+ 
+   
+ 
+  <xs:complexType name="Blockquote" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      <xs:element name="subform" type="Subform" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="subxpln" type="Subxpln" minOccurs="0" maxOccurs="unbounded"/>   
+    
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+  </xs:complexType>  
+  
+  
+  <xs:complexType name="Cit" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="work" use="optional" type="xs:string"/>
+  </xs:complexType> 
+
+  
+
+  <xs:complexType name="Class" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="type" use="optional"  type="classtype"/>
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+  </xs:complexType> 
+ 
+
+
+  <xs:complexType name="Damage" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="type" use="optional"  type="xs:string"/>
+    <xs:attribute name="source" use="optional" type="xs:string"/>
+    <xs:attribute name="extent" use="optional" type="xs:string"/>
+  </xs:complexType>  
+  
+  
+  <xs:complexType name="Editoraddition" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      <xs:element name="subform" type="Subform" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="subxpln" type="Subxpln" minOccurs="0" maxOccurs="unbounded"/>
+    
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+  </xs:complexType> 
+   
+  
+  
+  <xs:complexType name="Emend" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="err" type="xs:string" use="optional"/>
+    <xs:attribute name="source" type="xs:string" use="optional"/>
+  </xs:complexType> 
+  
+    
+    
+  <xs:complexType name="Etym" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+  </xs:complexType> 
+     
+  
+  
+  <xs:complexType name="Etymlang" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+  </xs:complexType> 
+ 
+  
+  
+  <xs:complexType name="Expan" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType> 
+  
+     
+     
+  <xs:complexType name="Expression" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+  </xs:complexType>      
+     
+     
+  <xs:complexType name="F" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="type" use="optional" type="fontface"/>
+  </xs:complexType>    
+     
+     
+  <xs:complexType name="Hungword" mixed="true"/>   
+     
+     
+  <xs:complexType name="I" mixed="true"/>
+  
+  
+  <xs:complexType name="Infl" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+  </xs:complexType> 
+
+   
+     
+  <xs:complexType name="Lemeformat" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+
+  </xs:complexType>      
+     
+     
+  <xs:complexType name="Lemenote" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="type" use="optional" type="xs:string" fixed = "display"/>
+  </xs:complexType> 
+  
+  
+  
+  <xs:complexType name="Lemepagenote" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="type" use="optional" type="xs:string" fixed = "display"/>
+  </xs:complexType>     
+
+
+  <xs:complexType name="Note" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+      
+    </xs:choice>
+      <xs:attribute name="type" type="notetype" />
+      <xs:attribute name="location" type="notetype"/>
+      <xs:attribute name="lang" use="optional" type="langstr"/>
+  </xs:complexType> 
+     
+     
+  <xs:complexType name="Ornament">
+      <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType> 
+     
+  
+  <xs:complexType name="Pb">
+      <xs:attribute name="no" use="optional" type="xs:string"/>
+      <xs:attribute name="pg" use="optional" type="xs:string"/>
+      <xs:attribute name="fol" use="optional" type="xs:string"/>
+      <xs:attribute name="sig" use="optional" type="xs:string"/>
+  </xs:complexType> 
+  
+  
+
+  <xs:complexType name="Sic" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="cor" use="optional" type="xs:string"/>
+  </xs:complexType> 
+ 
+     
+     
+  <xs:complexType name="Term" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+       <xs:element name="heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/> 
+    </xs:choice>
+    
+    <xs:attribute name="lang" use="optional" type="langstr"/>
+  </xs:complexType> 
+       
+     
+     
+  <xs:complexType name="Xref">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">  
+      
+      <xs:element name="blockquote" type="Blockquote" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="cit" type="Cit" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="class" type="Class" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="damage" type="Damage" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="editoraddition" type="Editoraddition" minOccurs="0" maxOccurs="unbounded"/> 
+      <xs:element name="emend" type="Emend" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="expan" type="Expan" minOccurs="0" maxOccurs="unbounded"/>    
+      <xs:element name="expression" type="Expression" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="etym" type="Etym" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="etymlang" type="Etymlang" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="f" type="F" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="hungword" type="Hungword"  minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="i" type="I" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="infl" type="Infl" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="lemeformat" type="Lemeformat" minOccurs="0" maxOccurs="unbounded"/>     
+      <xs:element name="lemenote" type="Lemenote" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element name="lemepagenote" type="Lemepagenote" minOccurs="0" maxOccurs="unbounded"/>       
+      <xs:element name="note" type="Note" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="ornament" type="Ornament" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="pb" type="Pb" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="sic" type="Sic" minOccurs="0" maxOccurs="unbounded"/>   
+      <xs:element name="term" type="Term" minOccurs="0" maxOccurs="unbounded"/>  
+      <xs:element name="xref" type="Xref" minOccurs="0" maxOccurs="unbounded"/>
+      
+      <xs:element name="type"  minOccurs="1" maxOccurs="1">
+        <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="external" />
+          <xs:enumeration value="notwe" />
+        </xs:restriction>
+        </xs:simpleType>
+      </xs:element> 
+      
+      <xs:element name="lexeme" type="xs:string"/>
+      <xs:element name="anchor" type="xs:string"/>
+      <xs:element name="anchor" type="xs:string"/>
+    </xs:choice> 
+      
+  </xs:complexType> 
+    
+
+  <xs:element name="root">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="leme" type="Leme"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+      
+     
+</xs:schema>
