@@ -3,10 +3,10 @@ Contact: victoria.spada@mail.utoronto.ca
 
 # LEME Preprocessing & Validation readME file
 -------------------------------------------
-The preprocessing and validation programs were created to:
-(1) take a input .txt file and output the same file as an .xml file.
+The preprocessing and validation programs were created to:  
+(1) take a input .txt file and output the same file as an .xml file.  
 (2) scan the outputted .xml file from the preprocessing program and 
-validate whether the file is encoded according to LEME's encoding rules.  
+validate whether the file is encoded according to LEME's encoding rules.    
 
 ## Setup
 `git clone https://www.github.com/victoriarspada/leme-error-checker`  
