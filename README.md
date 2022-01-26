@@ -9,15 +9,15 @@ The preprocessing and validation programs were created to:
 validate whether the file is encoded according to LEME's encoding rules.  
 
 ## Setup
-`git clone https://www.github.com/victoriarspada/leme-error-checker`
-`cd leme-error-checker`
-`pip install pyinstaller`
-Create the executable for the preprocessing program:
-`pyinstaller --onefile txt_to_xml.py`
-Creeate the executable for the validation program:
-`pyinstaller --onefile main.py`
-
-Open the executables in `dist` to run the programs.
+`git clone https://www.github.com/victoriarspada/leme-error-checker`  
+`cd leme-error-checker`  
+`pip install pyinstaller`  
+Create the executable for the preprocessing program:  
+`pyinstaller --onefile txt_to_xml.py`  
+Creeate the executable for the validation program:  
+`pyinstaller --onefile main.py`  
+  
+Open the executables in `dist` to run the programs.  
 
 ## PREPROCESSING PROGRAM
 ### txt_to_xml.exe
