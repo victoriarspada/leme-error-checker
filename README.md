@@ -12,8 +12,10 @@ validate whether the file is encoded according to LEME's encoding rules.
 `git clone https://www.github.com/victoriarspada/leme-error-checker`  
 `cd leme-error-checker`  
 `pip install pyinstaller`  
+  
 Create the executable for the preprocessing program:  
 `pyinstaller --onefile txt_to_xml.py`  
+  
 Creeate the executable for the validation program:  
 `pyinstaller --onefile main.py`  
   
